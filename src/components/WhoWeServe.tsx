@@ -99,10 +99,9 @@ export const WhoWeServe: React.FC = () => {
 
                     <motion.p
                         variants={scrollReveal}
-                        className="text-center text-lg max-w-3xl mx-auto"
+                        className="text-center text-lg max-w-5xl mx-auto"
                     >
-                        We partner with <span className="font-bold">properties that value community, connection, and well-being</span>,
-                        <br />
+                        We partner with properties that value the tenant experience: <span className="font-bold">community, connection, and well-being</span>,
                         helping them foster engagement and drive measurable results.
                     </motion.p>
                 </motion.div>
