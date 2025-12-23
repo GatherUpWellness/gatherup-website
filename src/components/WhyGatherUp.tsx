@@ -59,7 +59,7 @@ export const WhyGatherUp: React.FC = () => {
                         {/* Left Column: Text */}
                         <motion.div className="space-y-6" variants={scrollReveal}>
                             <h3 className="text-2xl md:text-3xl font-bold text-[#053d3d] font-display">
-                                The power of GatherUp
+                                The Power of GatherUp
                             </h3>
                             <div className="text-lg space-y-4 text-gray-700 leading-relaxed">
                                 <p>
