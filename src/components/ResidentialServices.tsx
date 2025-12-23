@@ -1,0 +1,213 @@
+'use client';
+
+import React, { useRef, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
+import { scrollReveal, imageLoad, staggerContainer, flipCardTransition, flipCardContainerStyle, flipCardBackfaceStyle, flipCardPerspectiveStyle } from '@/utils/animations';
+
+export const ResidentialServices: React.FC = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+    const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
+
+    const handleCardFlip = (index: number) => {
+        if (!flippedCards.has(index)) {
+            setFlippedCards((prev) => new Set(prev).add(index));
+        }
+    };
+
+    const servicesIcons = [
+        {
+            title: "On-site Wellness Activations",
+            description: "Light-touch movement, mindfulness, and social wellness events suited to your resident profile.",
+            iconSrc: "/assets/icons/Heart.png",
+            iconAlt: "Heart",
+            iconSize: "w-20 h-20 mb-6"
+        },
+        {
+            title: "Community and Connection Series",
+            description: "Monthly themes that make it easier for residents to meet each other and build friendships in the building.",
+            iconSrc: "/assets/icons/Bulb.png",
+            iconAlt: "Bulb",
+            iconSize: "w-20 h-20 mb-6"
+        },
+        {
+            title: "Program Design & Comms Support",
+            description: "Templates, calendars, and messaging so your team isn't planning events on the side of their day job.",
+            iconSrc: "/assets/icons/Calendar.png",
+            iconAlt: "Calendar",
+            iconSize: "w-20 h-20 mb-6"
+        }
+    ];
+
+    return (
+        <section className="py-16 md:py-20 bg-[#053d3d]">
+            <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+                <motion.div
+                    ref={sectionRef}
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
+                    <motion.h2
+                        variants={scrollReveal}
+                        className="text-lg md:text-xl text-[#a6ff48] mb-12 leading-relaxed text-center max-w-5xl mx-auto"
+                    >
+                        From Happier Residents to Healthier NOI
+                    </motion.h2>
+
+                    {/* Responsive Image */}
+                    <motion.div
+                        variants={scrollReveal}
+                        className="relative w-full mb-12 max-w-5xl mx-auto"
+                        style={{ backgroundColor: '#053d3d' }}
+                    >
+                        <div
+                            className="relative w-full h-96 lg:h-[500px]"
+                            style={{ backgroundColor: '#053d3d' }}
+                        >
+                            <Image
+                                src="/assets/images/at-gatherup-noi-no-bg.png"
+                                alt="GatherUp NOI Impact"
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 80vw"
+                            />
+                        </div>
+                    </motion.div>
+
+                    {/* Feature Cards */}
+                    <motion.div
+                        className="px-2 md:px-4 grid md:grid-cols-3 lg:grid-cols-3 md:gap-4 gap-8 max-w-6xl mx-auto items-stretch"
+                        variants={staggerContainer}
+                    >
+                        {servicesIcons.map((item, index) => {
+                            const isFlipped = flippedCards.has(index);
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    variants={scrollReveal}
+                                    className="relative h-full"
+                                >
+                                    {/* Mobile/Tablet: Simple card without flip - icon, title, and description */}
+                                    <div className="lg:hidden h-full">
+                                        <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full overflow-hidden">
+                                            <motion.div
+                                                className="flex items-center justify-center h-20 mb-4"
+                                                variants={imageLoad}
+                                                initial="hidden"
+                                                animate={isInView ? "visible" : "hidden"}
+                                            >
+                                                <div className={`relative ${item.iconSize}`}>
+                                                    <Image
+                                                        src={item.iconSrc}
+                                                        alt={item.iconAlt}
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                </div>
+                                            </motion.div>
+                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-white/90 text-base leading-relaxed flex-1">
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Desktop: Flip card with transition */}
+                                    <div
+                                        className="hidden lg:block relative cursor-pointer h-full"
+                                        style={flipCardPerspectiveStyle}
+                                        onClick={() => handleCardFlip(index)}
+                                        onMouseEnter={() => handleCardFlip(index)}
+                                    >
+                                        {/* Height placeholder - matches front card content with description */}
+                                        <div className="opacity-0 pointer-events-none h-full">
+                                            <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full overflow-hidden">
+                                                <div className="flex items-center justify-center h-20">
+                                                    <div className={`relative ${item.iconSize}`}></div>
+                                                </div>
+                                                <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">{item.title}</h3>
+                                                <p className="text-white/90 text-base leading-relaxed flex-1">{item.description}</p>
+                                            </div>
+                                        </div>
+
+                                        {/* Flip container */}
+                                        <motion.div
+                                            className="absolute inset-0 w-full h-full"
+                                            initial={{ rotateY: 180 }}
+                                            animate={{
+                                                rotateY: isFlipped ? 0 : 180,
+                                            }}
+                                            transition={flipCardTransition}
+                                            style={flipCardContainerStyle}
+                                        >
+                                            {/* Back of card (shown initially) - icon and title only, centered */}
+                                            <motion.div
+                                                className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center justify-center text-center backface-hidden overflow-hidden"
+                                                style={{
+                                                    ...flipCardBackfaceStyle,
+                                                    transform: 'rotateY(180deg)',
+                                                }}
+                                            >
+                                                <motion.div
+                                                    className="flex items-center justify-center h-20"
+                                                    variants={imageLoad}
+                                                    initial="hidden"
+                                                    animate={!isFlipped ? "visible" : "hidden"}
+                                                >
+                                                    <div className={`relative ${item.iconSize}`}>
+                                                        <Image
+                                                            src={item.iconSrc}
+                                                            alt={item.iconAlt}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
+                                                </motion.div>
+                                                <h3 className="text-[#a6ff48] font-bold text-xl font-display">
+                                                    {item.title}
+                                                </h3>
+                                            </motion.div>
+
+                                            {/* Front of card (shown after flip) - icon, title, and full description */}
+                                            <motion.div
+                                                className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center backface-hidden overflow-hidden"
+                                                style={flipCardBackfaceStyle}
+                                            >
+                                                <motion.div
+                                                    className="flex items-center justify-center h-20"
+                                                    variants={imageLoad}
+                                                    initial="hidden"
+                                                    animate={isFlipped ? "visible" : "hidden"}
+                                                >
+                                                    <div className={`relative ${item.iconSize}`}>
+                                                        <Image
+                                                            src={item.iconSrc}
+                                                            alt={item.iconAlt}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
+                                                </motion.div>
+                                                <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
+                                                    {item.title}
+                                                </h3>
+                                                <p className="text-white/90 text-base leading-relaxed flex-1">
+                                                    {item.description}
+                                                </p>
+                                            </motion.div>
+                                        </motion.div>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </motion.div>
+                </motion.div>
+            </div>
+        </section>
+    );
+};

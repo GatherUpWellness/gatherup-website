@@ -1,0 +1,52 @@
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { BookDemoButton } from './BookDemoButton';
+import { scrollReveal, staggerContainer } from '@/utils/animations';
+
+interface ResidentialCTASectionProps {
+    title?: string;
+    subtitle?: string;
+    buttonText?: string;
+    buttonLink?: string;
+}
+
+export const ResidentialCTASection: React.FC<ResidentialCTASectionProps> = ({
+    title = "Ready to turn your property into a community tenants love?",
+    subtitle = "Let's create a place where people want to live and stay.",
+    buttonText = "Book a Demo",
+    buttonLink = "https://tidycal.com/gluckjamin/free-gatherup-consultation"
+}) => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+
+    return (
+        <section className="px-2 md:px-4 py-8 md:py-12 bg-[#f5faf5] text-center">
+            <div className="container mx-auto px-4">
+                <motion.div
+                    ref={sectionRef}
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
+                    <motion.h3
+                        variants={scrollReveal}
+                        className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-4 font-display"
+                    >
+                        {title}
+                    </motion.h3>
+                    <motion.p
+                        variants={scrollReveal}
+                        className="text-xl text-[#053d3d] mb-6"
+                    >
+                        {subtitle}
+                    </motion.p>
+                    <motion.div variants={scrollReveal}>
+                        <BookDemoButton />
+                    </motion.div>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
