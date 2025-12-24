@@ -11,17 +11,17 @@ export const WhyGatherUp: React.FC = () => {
         {
             title: "Boost Engagement",
             description: "Drive participation with interactive programming designed to energize your community.",
-            icon: "/assets/icons/Boost.png"
+            icon: "/assets/icons/New Icon Set/Boost Engagement.svg"
         },
         {
             title: "Increase Retention",
             description: "Reduce turnover by cultivating a strong sense of belonging through custom activations.",
-            icon: "/assets/icons/Retention-2.png"
+            icon: "/assets/icons/New Icon Set/Increase Retention.svg"
         },
         {
             title: "Strengthen Culture & Foster Belonging",
             description: "Strengthen tenant dynamics and reduce turnover with custom community-building initiatives.",
-            icon: "/assets/icons/Belonging.png"
+            icon: "/assets/icons/New Icon Set/Strengthen Culture & Foster Belonging.svg"
         }
     ];
 

@@ -20,21 +20,21 @@ export const CommercialServices: React.FC = () => {
         {
             title: "Amenity Activation & Calendars",
             description: "Weekly or monthly wellness, social, and community touchpoints in spaces you already have.",
-            iconSrc: "/assets/icons/Heart.png",
+            iconSrc: "/assets/icons/New Icon Set/Amenity Activation & Calendars.svg",
             iconAlt: "Heart",
             iconSize: "w-20 h-20 mb-4"
         },
         {
             title: "Workplace Wellbeing Sessions",
             description: "Short, practical sessions that support focus, mental health, and energy for tenant teams.",
-            iconSrc: "/assets/icons/Lotus.png",
+            iconSrc: "/assets/icons/New Icon Set/Workplace Wellbeing Sessions.svg",
             iconAlt: "Lotus",
             iconSize: "w-20 h-20 mb-4"
         },
         {
             title: "Strategy & Measurement",
             description: "Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.",
-            iconSrc: "/assets/icons/Flowers.png",
+            iconSrc: "/assets/icons/New Icon Set/Strategy & Measurement.svg",
             iconAlt: "Flowers",
             iconSize: "w-20 h-20 mb-4"
         }

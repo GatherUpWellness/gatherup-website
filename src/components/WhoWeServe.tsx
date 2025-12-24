@@ -11,19 +11,19 @@ export const WhoWeServe: React.FC = () => {
     const propertyTypes = [
         {
             name: "Residential\nCommunities",
-            icon: "/assets/icons/Residential-Communities.png"
+            icon: "/assets/icons/New Icon Set/Residential Communities.svg"
         },
         {
             name: "Commercial\nOffice Properties",
-            icon: "/assets/icons/Commercial-Office-Properties.png"
+            icon: "/assets/icons/New Icon Set/Commercial Office Properties.svg"
         },
         {
             name: "Flexible\nWorkspaces",
-            icon: "/assets/icons/Coworking-Flexible-Workspaces.png"
+            icon: "/assets/icons/New Icon Set/Flexible Workspaces.svg"
         },
         {
             name: "Mixed-Use\nDevelopments",
-            icon: "/assets/icons/Mixed-Use-Developments.png"
+            icon: "/assets/icons/New Icon Set/Mixed-Use Developments.svg"
         }
     ];
 
@@ -65,7 +65,7 @@ export const WhoWeServe: React.FC = () => {
 
                     {/* Property Types Grid */}
                     <motion.div
-                        className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
                         variants={staggerContainer}
                     >
                         {propertyTypes.map((property, index) => (
