@@ -31,7 +31,7 @@ export const ResidentialNOI: React.FC = () => {
                         <p className="text-lg text-white mb-4">
                             When residents are happier and more connected, renewals increase, turnover drops, and vacancy friction decreases. The result is a healthier NOI through intentional experiences that turn everyday living into a reason to stay.
                         </p>
-                        <p className="text-xl text-[#a6ff48] font-bold mb-4 mt-100">
+                        <p className="text-xl text-[#a6ff48] font-bold mb-4 mt-4">
                             GatherUp helps properties turn resident wellbeing into a measurable business advantage.
                         </p>
                     </motion.div>

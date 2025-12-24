@@ -20,21 +20,21 @@ export const ResidentialServices: React.FC = () => {
         {
             title: "On-site Wellness Activations",
             description: "Light-touch movement, mindfulness, and social wellness events suited to your resident profile.",
-            iconSrc: "/assets/icons/Heart.png",
+            iconSrc: "/assets/icons/New Icon Set/On-site Wellness Activations.svg",
             iconAlt: "Heart",
             iconSize: "w-20 h-20 mb-6"
         },
         {
             title: "Community and Connection Series",
             description: "Monthly themes that make it easier for residents to meet each other and build friendships in the building.",
-            iconSrc: "/assets/icons/Bulb.png",
+            iconSrc: "/assets/icons/New Icon Set/Community and Connection Series.svg",
             iconAlt: "Bulb",
             iconSize: "w-20 h-20 mb-6"
         },
         {
             title: "Program Design & Comms Support",
             description: "Templates, calendars, and messaging so your team isn't planning events on the side of their day job.",
-            iconSrc: "/assets/icons/Calendar.png",
+            iconSrc: "/assets/icons/New Icon Set/Program Design & Comms Support.svg",
             iconAlt: "Calendar",
             iconSize: "w-20 h-20 mb-6"
         }

@@ -8,25 +8,25 @@ import { scrollReveal, imageLoad, staggerContainer, flipCardTransition, flipCard
 export const WhyChoose: React.FC = () => {
     const features = [
         {
-            icon: "/assets/icons/Vector-2.png",
+            icon: "/assets/icons/New Icon Set/Tailored Solutions.svg",
             iconSize: "w-12 h-12",
             title: "Tailored Solutions",
             description: "GatherUp builds connection-centered wellness programs designed for your property's tenants, culture, and goals. Every activation is shaped around the people who live or work in your building."
         },
         {
-            icon: "/assets/icons/Vector-1.png",
+            icon: "/assets/icons/New Icon Set/Efficiency.svg",
             iconSize: "w-14 h-14",
             title: "Efficiency",
             description: "We streamline everything so your onsite and leasing teams save time while your property sees meaningful results. From concept to execution, we run the full program, scheduling, communication, staffing, and measurement so you can stay focused on operating the building while still delivering a standout tenant experience."
         },
         {
-            icon: "/assets/icons/Vector.png",
+            icon: "/assets/icons/New Icon Set/True Partnership.svg",
             iconSize: "w-18 h-18",
             title: "True Partnership",
             description: "Think of us as an extension of your property team. We support your leasing, marketing, and management teams with consistent programming that builds a vibrant tenant community and supports retention. Our goal is long-term success: stronger relationships, higher satisfaction, and better property performance."
         },
         {
-            icon: "/assets/icons/Frame 17.png",
+            icon: "/assets/icons/New Icon Set/Clear Communication.svg",
             iconSize: "w-12 h-12",
             title: "Clear Communication",
             description: "You'll always know how programs are performing and the positive impact they're having on your tenants and your property's goals. We keep you updated every step of the way with simple reporting that shows engagement, outcomes, and how the experience is influencing satisfaction and renewals."

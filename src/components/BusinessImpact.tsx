@@ -20,42 +20,42 @@ export const BusinessImpact: React.FC = () => {
         {
             title: "Retention",
             description: "Tenants who feel connected to their building and community are significantly more likely to renew rather than relocate.",
-            iconSrc: "/assets/icons/Retention-1.png",
+            iconSrc: "/assets/icons/New Icon Set/Retention.svg",
             iconAlt: "Retention",
             iconSize: "w-20 h-20"
         },
         {
             title: "Engagement",
             description: "Activated amenities and shared experiences turn unused spaces into daily touchpoints that increase satisfaction and loyalty.",
-            iconSrc: "/assets/icons/Engagement.png",
+            iconSrc: "/assets/icons/New Icon Set/Engagement.svg",
             iconAlt: "Engagement",
             iconSize: "w-20 h-20"
         },
         {
             title: "Community",
             description: "Properties with strong community see better tenant relationships, smoother communication, and fewer friction points.",
-            iconSrc: "/assets/icons/Culture.png",
+            iconSrc: "/assets/icons/New Icon Set/Community.svg",
             iconAlt: "Community",
             iconSize: "w-20 h-20"
         },
         {
             title: "Occupancy & Leasing Velocity",
             description: "Engaged tenants become advocates supporting faster lease-ups and easier renewals through social proof and referrals.",
-            iconSrc: "/assets/icons/Occupancy-Leasing-Velocity.png",
+            iconSrc: "/assets/icons/New Icon Set/Occupancy & Leasing Velocity.svg",
             iconAlt: "Occupancy-Leasing-Velocity",
             iconSize: "w-20 h-20"
         },
         {
             title: "Property Reputation",
             description: "Consistent on-site programming improves reviews, tours, and perception without major capital investments.",
-            iconSrc: "/assets/icons/Property-Reputation.png",
+            iconSrc: "/assets/icons/New Icon Set/Property Reputation.svg",
             iconAlt: "Property-Reputation",
             iconSize: "w-24 h-24"
         },
         {
             title: "Performance",
             description: "Reduced turnover, improved renewals, and stronger demand directly protect and grow net operating income.",
-            iconSrc: "/assets/icons/Profitability.png",
+            iconSrc: "/assets/icons/New Icon Set/Performance.svg",
             iconAlt: "Performance",
             iconSize: "w-20 h-20"
         }
