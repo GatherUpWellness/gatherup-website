@@ -9,6 +9,7 @@ import { ResidentialServices } from '@/components/ResidentialServices';
 import { ResidentialCaseStudy } from '@/components/ResidentialCaseStudy';
 import { ResidentialCTASection } from '@/components/ResidentialCTASection';
 import { pageLoad } from '@/utils/animations';
+import { ResidentialNOI } from '@/components/ResidentialNOI';
 
 export default function ResidentialSolutions() {
     return (
@@ -22,6 +23,7 @@ export default function ResidentialSolutions() {
             <ResidentialHero />
             <ResidentialBenefits />
             <ResidentialServices />
+            <ResidentialNOI />
             <ResidentialCaseStudy />
             <ResidentialCTASection />
             <Footer />
