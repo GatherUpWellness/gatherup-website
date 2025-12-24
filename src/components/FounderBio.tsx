@@ -3,8 +3,8 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import { FaLinkedin, FaInstagram, FaFacebook, FaXTwitter } from 'react-icons/fa6';
 import { scrollReveal, imageLoad, staggerContainer } from '@/utils/animations';
+import { SiLinkedin, SiMedium } from 'react-icons/si';
 
 export const FounderBio: React.FC = () => {
     const sectionRef = useRef(null);
@@ -32,13 +32,10 @@ export const FounderBio: React.FC = () => {
                                     variants={imageLoad}
                                 >
                                     <Image
-                                        src="/assets/images/Founder-HD-2.JPG"
+                                        src="/assets/images/founder-hd-4.png"
                                         alt="Jamin Gluck, Founder of GatherUp"
                                         fill
-                                        className="object-cover"
-                                        style={{
-                                            objectPosition: 'center center'
-                                        }}
+                                        className="object-cover object-center md:object-[center_25%] lg:object-center"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 50vw"
                                         priority
                                     />
@@ -87,8 +84,11 @@ export const FounderBio: React.FC = () => {
                                     <a href="https://www.instagram.com/jamingluck" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Instagram">
                                         <FaInstagram className="w-6 h-6" />
                                     </a> */}
-                                    <a href="https://www.linkedin.com/in/jamin-gluck" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="LinkedIn">
-                                        <FaLinkedin className="w-6 h-6" />
+                                    <a href="https://www.linkedin.com/in/jamin-gluck" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="LinkedIn">
+                                        <SiLinkedin className="w-6 h-6" />
+                                    </a>
+                                    <a href="https://medium.com/@jamin_65314" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Medium">
+                                        <SiMedium className="w-6 h-6" />
                                     </a>
                                 </div>
                             </motion.div>
