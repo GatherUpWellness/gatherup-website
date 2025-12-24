@@ -31,7 +31,7 @@ export const GatherUp5DApproach: React.FC = () => {
         {
             number: "05",
             keyword: "DEMONSTRATE",
-            description: "You shouldn’t have to “hope” wellness works, you should see it. We track a simple, property friendly set of metrics, engagement, satisfaction, renewal intent, and reputation or leasing story inputs, so you can report real outcomes, not just attendance."
+            description: "You shouldn't have to \"hope\" wellness works, you should see it. We track a simple, property friendly set of metrics, engagement, satisfaction, renewal intent, and reputation or leasing story inputs, so you can report real outcomes, not just attendance."
         }
     ];
 

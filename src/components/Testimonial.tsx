@@ -25,7 +25,7 @@ interface TestimonialProps {
 export const Testimonial: React.FC<TestimonialProps> = ({
     title = "What Our Clients Say",
     testimonials,
-    autoPlayInterval = 2500,
+    autoPlayInterval = 4000,
     // Legacy props
     quote,
     author,
@@ -33,19 +33,22 @@ export const Testimonial: React.FC<TestimonialProps> = ({
 }) => {
     const defaultItems: TestimonialItem[] = [
         {
-            quote: "We used to treat our amenity floor like a line item. GatherUp turned it into something our tenants actually talk about in their recruiting and retention meetings. When renewals came up this year, we heard far fewer questions about ‘what else are we getting for this rent.’",
+            quote: "We used to treat our amenity floor like a line item. GatherUp turned it into something our tenants actually talk about in their recruiting and retention meetings. When renewals came up this year, we heard far fewer questions about 'what else are we getting for this rent.'",
             author: "Sarah M.",
             authorTitle: "Senior Property Manager, 1.1M SF Office Portfolio",
+            image: "/assets/images/testimonial-3.JPG",
         },
         {
-            quote: "Before GatherUp, our amenities looked great in photos but felt empty in real life. Now, residents actually plan their week around what’s happening in the building. We’ve seen fewer “I’m just shopping around” responses at renewal and more people saying, “We don’t want to lose this community.”",
+            quote: "Before GatherUp, our amenities looked great in photos but felt empty in real life. Now, residents actually plan their week around what's happening in the building. We've seen fewer \"I'm just shopping around\" responses at renewal and more people saying, \"We don't want to lose this community.\"",
             author: "Elena R.",
             authorTitle: "Regional Manager, 900-Unit Urban Portfolio",
+            image: "/assets/images/testimonial-1.JPG",
         },
         {
             quote: "The impact was immediate. Our tenants started using the amenity spaces we invested in, and the feedback during lease renewals completely changed. GatherUp made wellness a competitive advantage for our property.",
             author: "Jennifer L.",
             authorTitle: "VP Operations, Commercial Real Estate",
+            image: "/assets/images/testimonial-2.JPG",
         },
     ];
 
@@ -64,6 +67,14 @@ export const Testimonial: React.FC<TestimonialProps> = ({
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [isTransitioning, setIsTransitioning] = useState(true);
+    const [isHovering, setIsHovering] = useState(false);
+
+    // Swipe functionality state
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    // Minimum swipe distance (in pixels)
+    const minSwipeDistance = 50;
 
     // Duplicate items for infinite scroll
     const duplicatedItems = [...items, ...items];
@@ -128,12 +139,109 @@ export const Testimonial: React.FC<TestimonialProps> = ({
         return () => clearInterval(interval);
     }, [isAutoPlaying, nextSlide, autoPlayInterval, items.length]);
 
-    // Pause auto-play on hover
-    const handleMouseEnter = () => setIsAutoPlaying(false);
-    const handleMouseLeave = () => setIsAutoPlaying(true);
+    // Swipe handlers
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
 
-    const sectionRef = useRef(null);
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            nextSlide();
+        }
+        if (isRightSwipe) {
+            prevSlide();
+        }
+    };
+
+    // Pause auto-play on hover
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+        setIsAutoPlaying(false);
+    };
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+        setIsAutoPlaying(true);
+    };
+
+    const sectionRef = useRef<HTMLElement>(null);
+    const carouselRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+
+    // Intersection Observer for visibility-based pause
+    useEffect(() => {
+        if (!sectionRef.current) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    // Pause when not visible
+                    if (!entry.isIntersecting) {
+                        setIsAutoPlaying(false);
+                    } else {
+                        // Only resume if not hovering (hover takes priority)
+                        if (!isHovering) {
+                            setIsAutoPlaying(true);
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.2, // Pause when less than 20% visible
+            }
+        );
+
+        observer.observe(sectionRef.current);
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, [isHovering]);
+
+    // Scroll detection for pause during active scrolling
+    useEffect(() => {
+        let scrollTimeout: NodeJS.Timeout;
+        let isScrolling = false;
+
+        const handleScroll = () => {
+            if (!isScrolling) {
+                setIsAutoPlaying(false);
+                isScrolling = true;
+            }
+
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+                // Only resume if section is in view and not hovering (hover takes priority)
+                if (sectionRef.current && !isHovering) {
+                    const rect = sectionRef.current.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                    if (isVisible) {
+                        setIsAutoPlaying(true);
+                    }
+                }
+            }, 300); // Resume 300ms after scrolling stops
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            clearTimeout(scrollTimeout);
+        };
+    }, [isHovering]);
 
     if (items.length === 0) return null;
 
@@ -203,9 +311,13 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                 </motion.h2>
 
                 <div
+                    ref={carouselRef}
                     className="relative -mt-4"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                 >
                     {/* Main Carousel Card with smooth slide transition */}
                     <div className="bg-[#053d3d] rounded-lg shadow-xl overflow-hidden">
@@ -225,7 +337,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                                                             src={testimonial.image}
                                                             alt={testimonial.author}
                                                             fill
-                                                            className="object-cover"
+                                                            className="object-cover object-top"
                                                         />
                                                     ) : (
                                                         <div className="w-full h-full flex items-center justify-center bg-gray-200">

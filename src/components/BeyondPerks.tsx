@@ -33,25 +33,19 @@ export const BeyondPerks: React.FC = () => {
                         variants={scrollReveal}
                         className="text-lg md:text-lg text-[#053d3d] leading-relaxed mb-1"
                     >
-                        The problem isn't <span className="font-bold">what you built</span> — it's <span className="font-bold">what you activate</span>.
+                        The problem isn't <span className="font-bold">what you built</span>. It's <span className="font-bold">what you activate</span>.
                     </motion.p>
                     <motion.p
                         variants={scrollReveal}
                         className="text-lg md:text-lg text-[#053d3d] leading-relaxed mb-1"
                     >
-                        Static amenities don't create loyalty.
-                    </motion.p>
-                    <motion.p
-                        variants={scrollReveal}
-                        className="text-lg md:text-lg text-[#053d3d] leading-relaxed mb-4"
-                    >
-                        Occasional events don't create value.
+                        Static amenities don't create loyalty. Occasional events don't create value.
                     </motion.p>
                     <motion.p
                         variants={scrollReveal}
                         className="text-lg md:text-lg text-[#053d3d] leading-relaxed mb-1"
                     >
-                        Tenant wellbeing requires a <span className="font-bold">repeatable activation strategy</span> that turns spaces into experiences and buildings into places people want to stay.
+                        Tenant well-being requires a <span className="font-bold">repeatable activation strategy</span> that turns spaces into experiences and buildings into places people want to stay.
                     </motion.p>
                 </motion.div>
             </div>

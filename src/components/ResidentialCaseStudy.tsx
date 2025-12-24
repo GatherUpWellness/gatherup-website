@@ -249,7 +249,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                     </div>
 
                     <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
-                        More residents reported <span className="font-bold">"I know at least 3 neighbors by name"</span> and <span className="font-bold text-[#a6ff48]">"I feel a sense of community here"</span> on follow-up surveys.
+                        More residents reported <span className="font-bold">"I know at least 3 neighbors by name"</span> and <span className="font-bold">"I feel a sense of community here"</span> on follow-up surveys.
                         This is the kind of community and retention shift we aim to achieve with a focused, manageable program.
                     </p>
                 </div>
