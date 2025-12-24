@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { scrollReveal, imageLoad, staggerContainer } from '@/utils/animations';
-import { SiLinkedin, SiMedium } from 'react-icons/si';
+import { FaLinkedin, FaMedium } from 'react-icons/fa6';
 
 export const FounderBio: React.FC = () => {
     const sectionRef = useRef(null);
@@ -85,10 +85,10 @@ export const FounderBio: React.FC = () => {
                                         <FaInstagram className="w-6 h-6" />
                                     </a> */}
                                     <a href="https://www.linkedin.com/in/jamin-gluck" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="LinkedIn">
-                                        <SiLinkedin className="w-6 h-6" />
+                                        <FaLinkedin className="w-6 h-6" />
                                     </a>
                                     <a href="https://medium.com/@jamin_65314" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Medium">
-                                        <SiMedium className="w-6 h-6" />
+                                        <FaMedium className="w-6 h-6" />
                                     </a>
                                 </div>
                             </motion.div>

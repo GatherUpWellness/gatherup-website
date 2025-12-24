@@ -49,32 +49,7 @@ export const ResidentialServices: React.FC = () => {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
-                    <motion.h2
-                        variants={scrollReveal}
-                        className="text-lg md:text-xl text-[#a6ff48] mb-12 leading-relaxed text-center max-w-5xl mx-auto"
-                    >
-                        From Happier Residents to Healthier NOI
-                    </motion.h2>
-
-                    {/* Responsive Image */}
-                    <motion.div
-                        variants={scrollReveal}
-                        className="relative w-full mb-12 max-w-5xl mx-auto"
-                        style={{ backgroundColor: '#053d3d' }}
-                    >
-                        <div
-                            className="relative w-full h-96 lg:h-[500px]"
-                            style={{ backgroundColor: '#053d3d' }}
-                        >
-                            <Image
-                                src="/assets/images/at-gatherup-noi-no-bg.png"
-                                alt="GatherUp NOI Impact"
-                                fill
-                                className="object-contain"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 80vw"
-                            />
-                        </div>
-                    </motion.div>
+                    <p className="text-white text-center text-lg mb-6">Our residential solutions usually combine :</p>
 
                     {/* Feature Cards */}
                     <motion.div
