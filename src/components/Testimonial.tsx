@@ -33,19 +33,22 @@ export const Testimonial: React.FC<TestimonialProps> = ({
 }) => {
     const defaultItems: TestimonialItem[] = [
         {
-            quote: "We used to treat our amenity floor like a line item. GatherUp turned it into something our tenants actually talk about in their recruiting and retention meetings. When renewals came up this year, we heard far fewer questions about ‘what else are we getting for this rent.’",
+            quote: "We used to treat our amenity floor like a line item. GatherUp turned it into something our tenants actually talk about in their recruiting and retention meetings. When renewals came up this year, we heard far fewer questions about 'what else are we getting for this rent.'",
             author: "Sarah M.",
             authorTitle: "Senior Property Manager, 1.1M SF Office Portfolio",
+            image: "/assets/images/testimonial-1.JPG",
         },
         {
-            quote: "Before GatherUp, our amenities looked great in photos but felt empty in real life. Now, residents actually plan their week around what’s happening in the building. We’ve seen fewer “I’m just shopping around” responses at renewal and more people saying, “We don’t want to lose this community.”",
+            quote: "Before GatherUp, our amenities looked great in photos but felt empty in real life. Now, residents actually plan their week around what's happening in the building. We've seen fewer \"I'm just shopping around\" responses at renewal and more people saying, \"We don't want to lose this community.\"",
             author: "Elena R.",
             authorTitle: "Regional Manager, 900-Unit Urban Portfolio",
+            image: "/assets/images/testimonial-2.JPG",
         },
         {
             quote: "The impact was immediate. Our tenants started using the amenity spaces we invested in, and the feedback during lease renewals completely changed. GatherUp made wellness a competitive advantage for our property.",
             author: "Jennifer L.",
             authorTitle: "VP Operations, Commercial Real Estate",
+            image: "/assets/images/testimonial-3.JPG",
         },
     ];
 
@@ -225,7 +228,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                                                             src={testimonial.image}
                                                             alt={testimonial.author}
                                                             fill
-                                                            className="object-cover"
+                                                            className="object-cover object-top"
                                                         />
                                                     ) : (
                                                         <div className="w-full h-full flex items-center justify-center bg-gray-200">
