@@ -30,7 +30,7 @@ export const ScrollingLogos: React.FC = () => {
         >
             <div className="flex w-max animate-scroll items-center">
                 {duplicatedPartners.map((partner, index) => (
-                    <div key={index} className="flex-shrink-0 px-4 sm:px-6 md:px-8 lg:px-10">
+                    <div key={index} className="flex-shrink-0 py-2 px-4 sm:px-6 md:px-8 lg:px-10">
                         {/* <div className="relative w-32 h-16 sm:w-40 sm:h-20 md:w-48 md:h-24 lg:w-56 lg:h-28 flex items-center justify-center"> */}
                         <div className="relative w-40 h-20 flex items-center justify-center">
                             <Image
