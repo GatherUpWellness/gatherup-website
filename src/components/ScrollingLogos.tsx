@@ -7,10 +7,11 @@ import { scrollReveal } from '@/utils/animations';
 
 export const ScrollingLogos: React.FC = () => {
     const partners = [
-        { name: "Amazon", logo: "/assets/images/logos/amazon.png" },
-        { name: "CBRE", logo: "/assets/images/logos/cbre.png" },
-        { name: "Cox", logo: "/assets/images/logos/cox.png" },
-        { name: "Life Time", logo: "/assets/images/logos/lifetime.png" }
+        { name: "Amazon", logo: "/assets/images/logos/amazon-svg.svg" },
+        { name: "CBRE", logo: "/assets/images/logos/cbre-svg.svg" },
+        { name: "Cox", logo: "/assets/images/logos/cox-svg.svg" },
+        { name: "Life Time", logo: "/assets/images/logos/lifetime-fitness-svg.svg" },
+        { name: "Cousins Properties", logo: "/assets/images/logos/cousins-properties-svg.svg" }
     ];
 
     // Duplicate the array multiple times for seamless scrolling
@@ -27,20 +28,22 @@ export const ScrollingLogos: React.FC = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
         >
-            <div className="flex w-max animate-scroll">
+            <div className="flex w-max animate-scroll items-center">
                 {duplicatedPartners.map((partner, index) => (
-                    <div key={index} className="flex-shrink-0 mx-0 md:mx-1 lg:mx-0">
-                        <div className={`relative scale-120 w-64 h-32 sm:w-40 sm:h-20 md:w-96 md:h-48 lg:w-56 lg:h-28 ${partner.name === "Amazon" ? "mt-[5px]" : ""}`}>
+                    <div key={index} className="flex-shrink-0 px-4 sm:px-6 md:px-8 lg:px-10">
+                        {/* <div className="relative w-32 h-16 sm:w-40 sm:h-20 md:w-48 md:h-24 lg:w-56 lg:h-28 flex items-center justify-center"> */}
+                        <div className="relative w-40 h-20 flex items-center justify-center">
                             <Image
                                 src={partner.logo}
                                 alt={partner.name}
                                 fill
-                                className="object-contain opacity-100 hover:opacity-100 transition-all duration-300"
+                                className="object-contain object-center"
+                                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, (max-width: 1024px) 192px, 224px"
                             />
                         </div>
                     </div>
                 ))}
             </div>
-        </motion.div>
+        </motion.div >
     );
 };

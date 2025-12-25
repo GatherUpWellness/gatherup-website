@@ -66,7 +66,7 @@ h4 {
 }
 
 .animate-scroll {
-  animation: scroll 35s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 /* h2:after {
