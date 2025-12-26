@@ -13,6 +13,7 @@ import { Testimonial } from "@/components/Testimonial";
 import { ScrollingLogos } from "@/components/ScrollingLogos";
 import { ImpactCalculator } from "@/components/ImpactCalculator";
 import { pageLoad } from "@/utils/animations";
+import { WhoWeServe } from '@/components/WhoWeServe';
 
 export default function Home() {
   return (
@@ -26,7 +27,8 @@ export default function Home() {
       <Hero />
       <WhyGatherUp />
       {/* <ImpactCalculator/> */}
-      <OurMission />
+      {/* <OurMission /> */}
+      <WhoWeServe />
       <ScrollingLogos />
       <WhyChoose />
       <PowerOfTenant />

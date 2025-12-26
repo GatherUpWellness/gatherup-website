@@ -19,9 +19,9 @@ export default function AboutUs() {
         >
             <Header />
             <FounderBio />
-            <WhoWeServe />
+            {/* <WhoWeServe /> */}
+            <OurMission />
             <GatherUp5DApproach />
-            {/* <OurMission /> */}
             <Footer />
         </motion.main>
     );
