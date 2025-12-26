@@ -7,7 +7,7 @@ import { fadeInUp, imageLoad, staggerContainer } from '@/utils/animations';
 
 export const WhyItMattersHero: React.FC = () => {
     return (
-        <section className="relative min-h-[600px] md:min-h-[650px] flex items-center overflow-hidden bg-[#A6FF48]">
+        <section className="relative min-h-[600px] md:min-h-[650px] flex items-center overflow-hidden bg-[#F5FAF5]">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 {/* Portrait image for mobile devices */}
@@ -18,10 +18,10 @@ export const WhyItMattersHero: React.FC = () => {
                     animate="visible"
                 >
                     <Image
-                        src="/assets/images/High Five after Workout_edited.png"
+                        src="/assets/images/IMG_1736_v2.png"
                         alt="Employee Well-Being"
                         fill
-                        className="object-cover object-center opacity-72"
+                        className="object-cover object-center"
                         priority
                     />
                 </motion.div>
@@ -33,15 +33,15 @@ export const WhyItMattersHero: React.FC = () => {
                     animate="visible"
                 >
                     <Image
-                        src="/assets/images/High Five after Workout_edited.png"
+                        src="/assets/images/IMG_1736.JPG"
                         alt="Employee Well-Being"
                         fill
-                        className="object-cover object-center opacity-72"
+                        className="object-cover object-[39%_61%]"
                         priority
                     />
                 </motion.div>
                 {/* Overlay to ensure text readability */}
-                <div className="absolute inset-0 bg-white/20"></div>
+                <div className="absolute inset-0 bg-black/25"></div>
             </div>
 
             {/* Content */}
@@ -52,13 +52,22 @@ export const WhyItMattersHero: React.FC = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    <motion.h1
+
+                    {/* <span className="inline-block bg-[#a6ff48] text-[#053d3d] px-4 py-2 mt-2 text-3xl md:text-4xl"> */}
+                    {/* Why does Tenant<br />
+                        Well-Being Matter? */}
+                    {/* </span> */}
+                    <motion.div
                         variants={fadeInUp}
-                        className="mt-20 text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#053d3d] leading-tight drop-shadow-sm font-display"
+                        className="w-full text-4xl sm:text-4xl sm:mt-4 mt-12 md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight drop-shadow-lg"
                     >
-                        Why does Tenant<br />
-                        Well-Being Matter?
-                    </motion.h1>
+                        <p className="font-bold text-[#A6FF48] leading-snug">
+                            Why Does Tenant
+                        </p>
+                        <p className="font-bold text-[#A6FF48] leading-snug">
+                            Well-Being Matter?
+                        </p>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

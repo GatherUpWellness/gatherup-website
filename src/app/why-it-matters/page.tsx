@@ -12,6 +12,7 @@ import { AtGatherUp } from '@/components/AtGatherUp';
 import { BlogPreview } from '@/components/BlogPreview';
 import { CTASection } from '@/components/CTASection';
 import { pageLoad } from '@/utils/animations';
+import { TenantStatsOption1 } from "@/components/TenantStatsOption1";
 
 export default function WhyItMatters() {
     return (
@@ -28,6 +29,7 @@ export default function WhyItMatters() {
             <BusinessImpact />
             <BeyondPerks />
             <AtGatherUp />
+            <TenantStatsOption1 />
             {/* <BlogPreview /> */}
             <CTASection />
             <Footer />

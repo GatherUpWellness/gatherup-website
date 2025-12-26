@@ -28,7 +28,7 @@ export const WhoWeServe: React.FC = () => {
     ];
 
     return (
-        <section className="px-2 md:px-2 py-12 md:pb-16 lg:pb-20 bg-[#F5FAF5] text-[#053D3D]">
+        <section className="px-2 md:px-2 py-12 md:pb-16 lg:pb-20 bg-[#053D3D] text-[#A6FF48]">
             <div className="container mx-auto px-4">
                 <motion.div
                     ref={sectionRef}
@@ -45,7 +45,7 @@ export const WhoWeServe: React.FC = () => {
                     </motion.h2>
                     <motion.p
                         variants={scrollReveal}
-                        className="text-center text-lg mb-4"
+                        className="text-center text-lg mb-4 text-[#F5FAF5]"
                     >
                         GatherUp partners with <span className="font-bold">property leaders</span> committed to building healthier, more connected communities.
                     </motion.p>
@@ -54,11 +54,11 @@ export const WhoWeServe: React.FC = () => {
                         variants={scrollReveal}
                         className="flex justify-center mb-4"
                     >
-                        <div className="h-px bg-[#053D3D]/30" style={{ width: 'min(80vw, 100ch)' }}></div>
+                        <div className="h-px bg-white/30" style={{ width: 'min(80vw, 100ch)' }}></div>
                     </motion.div>
                     <motion.p
                         variants={scrollReveal}
-                        className="text-center text-lg mb-4"
+                        className="text-center text-lg mb-4 text-[#F5FAF5]"
                     >
                         Our wellness-driven activation strategies are designed specifically for:
                     </motion.p>
@@ -72,7 +72,7 @@ export const WhoWeServe: React.FC = () => {
                             <motion.div
                                 key={index}
                                 variants={scrollReveal}
-                                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1 md:p-1 text-center hover:bg-white/20 transition-colors flex flex-col items-center justify-center"
+                                className="backdrop-blur-sm text-center transition-colors flex flex-col items-center justify-center"
                             >
                                 <motion.div
                                     className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 mb-2 md:mb-3"
@@ -82,12 +82,8 @@ export const WhoWeServe: React.FC = () => {
                                         src={property.icon}
                                         alt={property.name.replace('\n', ' ')}
                                         fill
-                                        className="object-contain"
+                                        className="object-contain text-[#A6FF48]"
                                         sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 56px"
-                                        style={{
-                                            filter: 'brightness(0) saturate(100%) invert(15%) sepia(25%) saturate(1800%) hue-rotate(140deg) brightness(0.9) contrast(1.2)',
-                                            WebkitFilter: 'brightness(0) saturate(100%) invert(15%) sepia(25%) saturate(1800%) hue-rotate(140deg) brightness(0.9) contrast(1.2)'
-                                        }}
                                     />
                                 </motion.div>
                                 <p className="font-bold whitespace-pre-line text-md md:text-xl leading-tight">
@@ -99,7 +95,7 @@ export const WhoWeServe: React.FC = () => {
 
                     <motion.p
                         variants={scrollReveal}
-                        className="text-center text-lg max-w-5xl mx-auto"
+                        className="text-center text-lg max-w-5xl mx-auto text-[#F5FAF5]"
                     >
                         We partner with properties that value the tenant experience: <span className="font-bold">community, connection, and well-being</span>,
                         helping them foster engagement and drive measurable results.
