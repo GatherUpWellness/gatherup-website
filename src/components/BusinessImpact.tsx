@@ -94,7 +94,6 @@ export const BusinessImpact: React.FC = () => {
                                     <div className="lg:hidden h-full">
                                         <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full overflow-hidden">
                                             <motion.div
-                                                className="flex items-center justify-center h-20"
                                                 className="flex items-center justify-center h-20 mb-4"
                                                 variants={imageLoad}
                                                 initial="hidden"
