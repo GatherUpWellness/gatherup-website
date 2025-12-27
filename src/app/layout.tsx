@@ -14,8 +14,31 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "GatherUp Wellness | Build a Culture of Connection",
+  title: "GatherUp Wellness | Wellness Amenities, Fully Managed",
   description: "GatherUp Wellness helps organizations build a culture of connection and well-being through mindfulness and community.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://gatherupwellness.com'),
+  openGraph: {
+    title: "GatherUp Wellness | Wellness Amenities, Fully Managed",
+    description: "GatherUp Wellness helps organizations build a culture of connection and well-being through mindfulness and community.",
+    url: '/',
+    siteName: 'GatherUp Wellness',
+    images: [
+      {
+        url: '/assets/images/ps-outdoor-yoga-class-atlanta-laure-photography-45_edited.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'GatherUp Wellness - Outdoor Yoga Class',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "GatherUp Wellness | Wellness Amenities, Fully Managed",
+    description: "GatherUp Wellness helps organizations build a culture of connection and well-being through mindfulness and community.",
+    images: ['/assets/images/ps-outdoor-yoga-class-atlanta-laure-photography-45_edited.jpg'],
+  },
 };
 
 export default function RootLayout({

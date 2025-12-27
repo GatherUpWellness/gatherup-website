@@ -355,7 +355,7 @@ export const Header: React.FC = () => {
                                 }}
                                 onClick={() => setMobileMenuOpen(false)}
                             >
-                                Why it matters
+                                Why it Matters
                             </Link>
                             <Link
                                 href="/about-us"
