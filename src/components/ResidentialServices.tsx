@@ -25,7 +25,7 @@ export const ResidentialServices: React.FC = () => {
             iconSize: "w-20 h-20 mb-6"
         },
         {
-            title: "Community and Connection Series",
+            title: "Community & Connection Series",
             description: "Monthly themes that make it easier for residents to meet each other and build friendships in the building.",
             iconSrc: "/assets/icons/New Icon Set/Community and Connection Series.svg",
             iconAlt: "Bulb",
