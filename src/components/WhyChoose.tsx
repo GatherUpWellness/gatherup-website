@@ -46,7 +46,7 @@ export const WhyChoose: React.FC = () => {
     };
 
     return (
-        <section className="bg-[#053d3d] pt-12 pb-20 md:pt-16 md:pb-32">
+        <section className="bg-[#053d3d] py-10">
             <div className="container mx-auto max-w-7xl px-4 md:px-8">
                 {/* Header */}
                 <motion.div

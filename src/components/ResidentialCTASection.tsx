@@ -22,7 +22,7 @@ export const ResidentialCTASection: React.FC<ResidentialCTASectionProps> = ({
     const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
     return (
-        <section className="px-2 md:px-4 py-8 md:py-12 bg-[#f5faf5] text-center">
+        <section className="px-2 md:px-4 pt-2 pb-8 md:pt-2 md:pb-8 bg-[#f5faf5] text-center">
             <div className="container mx-auto px-4">
                 <motion.div
                     ref={sectionRef}

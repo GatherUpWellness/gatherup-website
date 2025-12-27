@@ -49,7 +49,12 @@ export const ResidentialServices: React.FC = () => {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
-                    <p className="text-white text-center text-lg mb-6">Our residential solutions usually combine :</p>
+                    <motion.p
+                        variants={scrollReveal}
+                        className="font-bold text-lg md:text-xl text-white mb-12 leading-relaxed text-center max-w-5xl mx-auto"
+                    >
+                        Our residential solutions combine:
+                    </motion.p>
 
                     {/* Feature Cards */}
                     <motion.div
