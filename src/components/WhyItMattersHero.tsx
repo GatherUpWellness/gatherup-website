@@ -59,14 +59,16 @@ export const WhyItMattersHero: React.FC = () => {
                     {/* </span> */}
                     <motion.div
                         variants={fadeInUp}
-                        className="w-full text-4xl sm:text-4xl sm:mt-4 mt-12 md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight drop-shadow-lg"
+                        className="w-full text-3xl sm:text-4xl sm:mt-4 mt-12 md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight drop-shadow-lg"
                     >
-                        <p className="font-bold text-[#A6FF48] leading-snug">
-                            Why Does Tenant
-                        </p>
-                        <p className="font-bold text-[#A6FF48] leading-snug">
-                            Well-Being Matter?
-                        </p>
+                        <div className="inline-block px-2 md:px-8 shadow-xl bg-[#053d3d]">
+                            <p className="font-bold text-[#A6FF48] leading-relaxed">
+                                Why Does Tenant
+                            </p>
+                            <p className="font-bold text-[#A6FF48] leading-relaxed">
+                                Well-Being Matter?
+                            </p>
+                        </div>
                     </motion.div>
                 </motion.div>
             </div>
