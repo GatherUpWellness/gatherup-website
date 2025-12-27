@@ -25,7 +25,7 @@ export const ResidentialServices: React.FC = () => {
             iconSize: "w-20 h-20 mb-6"
         },
         {
-            title: "Community and Connection Series",
+            title: "Community & Connection Series",
             description: "Monthly themes that make it easier for residents to meet each other and build friendships in the building.",
             iconSrc: "/assets/icons/New Icon Set/Community and Connection Series.svg",
             iconAlt: "Bulb",
@@ -49,7 +49,12 @@ export const ResidentialServices: React.FC = () => {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
-                    <p className="text-white text-center text-lg mb-6">Our residential solutions usually combine :</p>
+                    <motion.p
+                        variants={scrollReveal}
+                        className="font-bold text-lg md:text-xl text-white mb-12 leading-relaxed text-center max-w-5xl mx-auto"
+                    >
+                        Our residential solutions combine:
+                    </motion.p>
 
                     {/* Feature Cards */}
                     <motion.div

@@ -77,7 +77,7 @@ export const CaseStudy: React.FC = () => {
     }, [currentIndex]);
 
     return (
-        <section className="py-16 md:py-20 bg-[#F5FAF5]">
+        <section className="py-8 md:py-16 bg-[#F5FAF5]">
             {/* Hero Images Carousel */}
             <div className="container mx-auto px-4 md:px-8 max-w-6xl mb-16">
                 <div className="px-2 md:px-4 relative">

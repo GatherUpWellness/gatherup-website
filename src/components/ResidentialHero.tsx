@@ -36,8 +36,8 @@ export const ResidentialHero: React.FC = () => {
                         variants={fadeInUp}
                         className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#a6ff48] leading-tight"
                     >
-                        Residential Properties<br />
-                        & Mixed-Use Communities
+                        Residential & Mixed-Use<br />
+                        Communities
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}

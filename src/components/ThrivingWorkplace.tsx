@@ -11,11 +11,11 @@ export const ThrivingWorkplace: React.FC = () => {
     const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
     return (
-        <section className="w-full bg-[#f8fcfc]">
+        <section className="w-full bg-[#F5FAF5] py-10">
             {/* Header Section */}
             <motion.div
                 ref={sectionRef}
-                className="bg-[#F5FAF5] py-16 text-center px-4"
+                className="bg-[#F5FAF5] text-center px-4"
                 variants={scrollReveal}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}

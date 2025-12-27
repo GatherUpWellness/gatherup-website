@@ -94,7 +94,7 @@ export const BusinessImpact: React.FC = () => {
                                     <div className="lg:hidden h-full">
                                         <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full overflow-hidden">
                                             <motion.div
-                                                className="flex items-center justify-center h-20"
+                                                className="flex items-center justify-center h-20 mb-4"
                                                 variants={imageLoad}
                                                 initial="hidden"
                                                 animate={isInView ? "visible" : "hidden"}
@@ -108,7 +108,7 @@ export const BusinessImpact: React.FC = () => {
                                                     />
                                                 </div>
                                             </motion.div>
-                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
+                                            <h3 className="text-[#a6ff48] font-bold text-xl font-display min-h-[62px] flex justify-center">
                                                 {item.title}
                                             </h3>
                                             <p className="text-white/90 text-base leading-relaxed flex-1">
@@ -130,7 +130,7 @@ export const BusinessImpact: React.FC = () => {
                                                 <div className="flex items-center justify-center h-20">
                                                     <div className={`relative ${item.iconSize}`}></div>
                                                 </div>
-                                                <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">{item.title}</h3>
+                                                <h3 className="text-[#a6ff48] font-bold text-xl font-display min-h-[62px] flex items-center justify-center">{item.title}</h3>
                                                 <p className="text-white/90 text-base leading-relaxed flex-1">{item.description}</p>
                                             </div>
                                         </div>
@@ -154,7 +154,7 @@ export const BusinessImpact: React.FC = () => {
                                                 }}
                                             >
                                                 <motion.div
-                                                    className="flex items-center justify-center h-20"
+                                                    className="flex items-center justify-center h-20 mb-4"
                                                     variants={imageLoad}
                                                     initial="hidden"
                                                     animate={!isFlipped ? "visible" : "hidden"}
@@ -179,7 +179,7 @@ export const BusinessImpact: React.FC = () => {
                                                 style={flipCardBackfaceStyle}
                                             >
                                                 <motion.div
-                                                    className="flex items-center justify-center h-20"
+                                                    className="flex items-center justify-center h-20 mb-4"
                                                     variants={imageLoad}
                                                     initial="hidden"
                                                     animate={isFlipped ? "visible" : "hidden"}
@@ -193,7 +193,7 @@ export const BusinessImpact: React.FC = () => {
                                                         />
                                                     </div>
                                                 </motion.div>
-                                                <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
+                                                <h3 className="text-[#a6ff48] font-bold text-xl font-display min-h-[62px] flex justify-center">
                                                     {item.title}
                                                 </h3>
                                                 <p className="text-white/90 text-base leading-relaxed flex-1">
