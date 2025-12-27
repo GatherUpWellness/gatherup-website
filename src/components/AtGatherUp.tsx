@@ -19,7 +19,7 @@ export const AtGatherUp: React.FC = () => {
             <div className="container mx-auto px-4 max-w-6xl">
                 <motion.div
                     ref={sectionRef}
-                    className="grid md:grid-cols-2 gap-8 items-center py-4"
+                    className="grid md:grid-cols-2 gap-4 md:gap-8 items-center py-4"
                     variants={staggerContainer}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
@@ -57,9 +57,9 @@ export const AtGatherUp: React.FC = () => {
                         className="relative"
                         variants={imageLoad}
                     >
-                        <div className="relative w-full min-h-[300px] h-[400px] md:h-[550px] rounded-2xl overflow-hidden bg-[#053d3d]">
+                        <div className="relative w-full min-h-[360px] h-[480px] md:h-[660px] rounded-2xl overflow-hidden bg-[#053d3d]">
                             <Image
-                                src="/assets/images/at-gatherup-illustration-v3-no-bg.png"
+                                src="/assets/images/at-gatherup-illustration-v4-no-bg.png"
                                 alt="GatherUp Team"
                                 fill
                                 className="object-contain"
