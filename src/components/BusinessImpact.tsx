@@ -72,7 +72,7 @@ export const BusinessImpact: React.FC = () => {
                 >
                     <motion.h2
                         variants={scrollReveal}
-                        className="text-3xl md:text-4xl font-bold text-center mb-16 font-display"
+                        className="text-[#a6ff48] text-3xl md:text-4xl font-bold text-center mb-16 font-display"
                     >
                         The Impact on Property Performance
                     </motion.h2>
