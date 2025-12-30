@@ -39,7 +39,7 @@ export const BusinessImpact: React.FC = () => {
             iconSize: "w-20 h-20"
         },
         {
-            title: "Occupancy & Leasing Velocity",
+            title: "Occupancy & Leasing",
             description: "Engaged tenants become advocates supporting faster lease-ups and easier renewals through social proof and referrals.",
             iconSrc: "/assets/icons/New Icon Set/Occupancy & Leasing Velocity.svg",
             iconAlt: "Occupancy-Leasing-Velocity",

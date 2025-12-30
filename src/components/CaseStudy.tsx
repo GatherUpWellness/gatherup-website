@@ -209,7 +209,7 @@ export const CaseStudy: React.FC = () => {
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">04</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    Simple engagement and satisfaction tracking (QR pulse checks + short surveys)
+                                    Simple engagement and satisfaction tracking (QR codes to short surveys)
                                 </p>
                             </div>
                         </div>
@@ -219,7 +219,7 @@ export const CaseStudy: React.FC = () => {
                 {/* Results Section */}
                 <div>
                     <h3 className="px-2 md:px-4 text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
-                        Modeled results after 3-month pilot
+                        Results after 3-month pilot
                     </h3>
 
                     <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">
@@ -233,7 +233,7 @@ export const CaseStudy: React.FC = () => {
 
                         <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
                             <div>
-                                <p className="text-[#053d3d] text-base mb-2">Increase in tenant<br />contact satisfaction to</p>
+                                <p className="text-[#053d3d] text-base mb-2">Increase in tenant<br /> satisfaction to</p>
                                 <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.7 / 5</div>
                                 <p className="text-base">from from 3.7 on "overall<br />building experience"</p>
                             </div>

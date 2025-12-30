@@ -20,7 +20,7 @@ export const WhatsAtStake: React.FC = () => {
         "Stronger tenant satisfaction",
         "Longer stays and higher renewal rates",
         "More active, visible amenities",
-        "Better online reputation and word-of-mouth",
+        "Better online reputation and word-of-mouth reputations",
         "A clear competitive edge in leasing"
     ];
 
@@ -44,7 +44,7 @@ export const WhatsAtStake: React.FC = () => {
                         variants={scrollReveal}
                         className="text-lg text-white leading-relaxed mb-8"
                     >
-                        Workplace well-being is the antidote to disengagement, turnover, and culture.
+                        Property well-being is the antidote to disengagement, turnover, and culture.
                     </motion.p>
                     {/* White separator line */}
                     <motion.div
@@ -62,7 +62,7 @@ export const WhatsAtStake: React.FC = () => {
                     {/* Negative Stakes */}
                     <motion.div variants={scrollReveal}>
                         <p className="text-base text-[#a6ff48] mb-4 font-medium">
-                            When tenant experience is passive or overlooked, properties experience:
+                            When the tenant experience is passive or overlooked, properties experience:
                         </p>
                         <ul className="space-y-0">
                             {negativeStakes.map((item, i) => (
