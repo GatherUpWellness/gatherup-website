@@ -55,7 +55,7 @@ export const GatherUp5DApproach: React.FC = () => {
                         variants={scrollReveal}
                         className="text-md text-lg md:text-lg text-white leading-relaxed"
                     >
-                        We don't throw events at the wall and hope they work. Every engagement runs through the GatherUp 5D Approach so wellness and community initiatives support retention, reputation, and performance.
+                        Every engagement runs through the GatherUp 5D Approach so wellness and community initiatives support retention, reputation, and performance.
                     </motion.p>
                 </motion.div>
 

@@ -23,7 +23,7 @@ export const ResidentialBenefits: React.FC = () => {
                         className="text-lg md:text-xl text-center leading-relaxed max-w-4xl mx-auto text-white pt-10 pb-10"
                     >
                         Residents don't just renew apartments, they renew how it feels to live in your building.
-                        GatherUp works with owners, REITs, and property managers to turn under-used amenities into a steady source of connection, wellbeing, and renewal intent:
+                        GatherUp works with owners, REITs, and property managers to turn under-used amenities into a steady source of connection, well-being, and renewal intent:
                     </motion.p>
                     <motion.div
                         className="px-2 md:px-4 grid md:grid-cols-3 gap-8 md:gap-12"
@@ -53,7 +53,7 @@ export const ResidentialBenefits: React.FC = () => {
                             </div>
                             <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Better Reviews & Referrals</h3>
                             <p className="text-base md:text-lg leading-relaxed">
-                                Thoughtful wellness and community experiences show up in how residents talk about you online and to friends.
+                                Thoughtful wellness and community experiences show up in how residents talk about your building online and to friends.
                             </p>
                         </motion.div>
 

@@ -62,10 +62,10 @@ export const FounderBio: React.FC = () => {
                                         The lesson was clear. Performance suffers when people don't feel connected to the places they spend their time.
                                     </p>
                                     <p>
-                                        That insight led Jamin to shift from traditional growth roles into community and wellbeing strategy. He became a certified coach, facilitator, and experience designer, then founded GatherUp to help property owners and operators create environments that actually support satisfaction, retention, and loyalty.
+                                        That insight led Jamin to shift from traditional growth roles into community and well-being strategy. He became a certified coach, facilitator, and experience designer, then founded GatherUp to help property owners and operators create environments that actually support satisfaction, retention, and loyalty.
                                     </p>
                                     <p>
-                                        Today, Jamin works with property leaders who understand that tenant wellbeing isn't a "nice-to-have." It's a practical lever for renewals, occupancy, reputation, and NOI.
+                                        Today, Jamin works with property leaders who understand that tenant well-being isn't a "nice-to-have." It's a practical lever for renewals, occupancy, reputation, and NOI.
                                     </p>
                                     <p className="font-medium text-[#a6ff48]">
                                         GatherUp designs and delivers on-site experiences that activate amenities, strengthen community, and turn buildings into places people want to stay.

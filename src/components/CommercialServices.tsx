@@ -19,7 +19,7 @@ export const CommercialServices: React.FC = () => {
     const servicesIcons = [
         {
             title: "Amenity Activation & Calendars",
-            description: "Weekly or monthly wellness, social, and community touchpoints in spaces you already have.",
+            description: "Weekly or monthly wellness and community touchpoints in spaces you already have.",
             iconSrc: "/assets/icons/New Icon Set/Amenity Activation & Calendars.svg",
             iconAlt: "Heart",
             iconSize: "w-20 h-20 mb-4"
@@ -33,7 +33,7 @@ export const CommercialServices: React.FC = () => {
         },
         {
             title: "Strategy & Measurement",
-            description: "Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.",
+            description: "Simple frameworks for communications, feedback, and a set of KPIs tied back to retention and NOI.",
             iconSrc: "/assets/icons/New Icon Set/Strategy & Measurement.svg",
             iconAlt: "Flowers",
             iconSize: "w-20 h-20 mb-4"
@@ -53,7 +53,7 @@ export const CommercialServices: React.FC = () => {
                         variants={scrollReveal}
                         className="text-lg md:text-xl text-white mb-12 leading-relaxed text-center max-w-5xl mx-auto"
                     >
-                        You bring the building and the tenants. We bring a plug-in wellness and community engine that makes the most of what you've already built.
+                        You bring the building and the tenants. We bring a wellness and community engine that makes the most of what you've already built.
                     </motion.p>
 
                     {/* Feature Cards */}

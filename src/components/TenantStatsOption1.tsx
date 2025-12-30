@@ -21,7 +21,7 @@ export const TenantStatsOption1: React.FC = () => {
         },
         {
             number: "2-3x",
-            description: "higher engagement and loyalty in properties that prioritize tenant wellbeing compared to low-wellbeing environments",
+            description: "higher engagement and loyalty in properties that prioritize tenant well-being compared to low well-being environments",
             source: "Harvard Business Review",
             icon: (
                 <svg className="w-12 h-12 md:w-16 md:h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">

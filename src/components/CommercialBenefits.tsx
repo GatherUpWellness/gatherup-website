@@ -40,7 +40,7 @@ export const CommercialBenefits: React.FC = () => {
                             </div>
                             <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Leasing & Renewals</h3>
                             <p className="text-base md:text-lg leading-relaxed">
-                                A more engaging workplace helps your tenants attract and retain talent, which makes it easier for you to retain occupancy.
+                                A more engaging workplace helps your tenants attract and retain tenants, which makes it easier for you to retain occupancy.
                             </p>
                         </motion.div>
 
@@ -54,7 +54,7 @@ export const CommercialBenefits: React.FC = () => {
                             </div>
                             <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Tenant Satisfaction</h3>
                             <p className="text-base md:text-lg leading-relaxed">
-                                A consistent, well-branded activation plan gives your building a clear identity and keeps you top of mind when leases are up for renewal.
+                                A consistent, well-branded plan gives your building a clear identity and keeps you top of mind when leases are up for renewal.
                             </p>
                         </motion.div>
 

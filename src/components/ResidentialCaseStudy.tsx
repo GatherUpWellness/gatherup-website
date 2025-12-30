@@ -219,7 +219,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                 {/* Results Section */}
                 <div>
                     <h3 className="px-2 md:px-4 text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
-                        Modeled results after 6 months
+                        Results after 6 months
                     </h3>
 
                     <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">

@@ -9,7 +9,7 @@ export const AtGatherUp: React.FC = () => {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
     const beliefs = [
-        "Tenant experience drives retention",
+        "The tenant experience drives retention",
         "Community reduces turnover",
         "Activated spaces outperform passive amenities"
     ];
@@ -31,7 +31,7 @@ export const AtGatherUp: React.FC = () => {
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-[#a6ff48] mb-4 font-display">At GatherUp</h2>
                         <p className="text-lg text-white mb-4">
-                            We help residential, commercial, and mixed-use properties turn wellbeing into measurable performance.
+                            We help residential, commercial, and mixed-use properties turn well-being into measurable performance.
                         </p>
                         <p className="text-lg text-white mb-4">
                             We believe that:
@@ -48,7 +48,7 @@ export const AtGatherUp: React.FC = () => {
                             This isn't feel-good programming.
                         </p>
                         <p className="text-lg font-semibold text-white leading-relaxed">
-                            It's property strategy executed on-site.
+                            It's a property strategy executed on-site.
                         </p>
                     </motion.div>
 
