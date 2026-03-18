@@ -10,7 +10,8 @@ export const ScrollingLogos: React.FC = () => {
         { name: "Amazon", logo: "/assets/images/logos/amazon.png" },
         { name: "CBRE", logo: "/assets/images/logos/cbre.png" },
         { name: "Cox", logo: "/assets/images/logos/cox.png" },
-        { name: "Life Time", logo: "/assets/images/logos/lifetime.png" },
+        { name: "Cushman & Wakefield", logo: "/assets/images/logos/cushman-and-wakefield.png" },
+        { name: "JLL", logo: "/assets/images/logos/jll-2.png" },
         { name: "Cousins Properties", logo: "/assets/images/logos/cousins-properties-png.png" }
     ];
 
@@ -31,8 +32,8 @@ export const ScrollingLogos: React.FC = () => {
             <div className="flex w-max animate-scroll">
                 {duplicatedPartners.map((partner, index) => (
                     <div key={index} className="flex-shrink-0 mx-0 md:mx-1 lg:mx-0">
-                        <div className={`relative w-60 h-30 sm:w-40 sm:h-20 md:w-48 md:h-24 lg:w-56 lg:h-28 ${partner.name === "Amazon" ? "mt-[5px]" : ""} ${partner.name === "Cousins Properties" ? "flex items-center justify-center" : ""}`}>
-                            <div className={partner.name === "Cousins Properties" ? "relative w-[56%] h-[56%]" : "absolute inset-0"}>
+                        <div className={`relative w-60 h-30 sm:w-40 sm:h-20 md:w-48 md:h-24 lg:w-56 lg:h-28 ${partner.name === "Amazon" ? "mt-[5px]" : ""} ${partner.name === "Cushman & Wakefield" ? "mt-[6px]" : ""} ${partner.name === "Cousins Properties" || partner.name === "JLL" ? "flex items-center justify-center" : ""}`}>
+                            <div className={partner.name === "Cousins Properties" ? "relative w-[56%] h-[56%]" : partner.name === "JLL" ? "relative w-[45%] h-[45%]" : "absolute inset-0"}>
                                 <Image
                                     src={partner.logo}
                                     alt={partner.name}
