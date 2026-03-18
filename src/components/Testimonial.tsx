@@ -212,7 +212,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
 
     // Scroll detection for pause during active scrolling
     useEffect(() => {
-        let scrollTimeout: NodeJS.Timeout;
+        let scrollTimeout: ReturnType<typeof setTimeout>;
         let isScrolling = false;
 
         const handleScroll = () => {
