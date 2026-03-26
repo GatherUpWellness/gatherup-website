@@ -14,11 +14,11 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "GatherUp Wellness | Wellness that Works",
+  title: "GatherUp Wellness | Wellness that works.",
   description: "GatherUp Wellness helps organizations build a culture of connection and well-being through mindfulness and community.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://gatherupwellness.com'),
   openGraph: {
-    title: "GatherUp Wellness | Wellness that Works",
+    title: "GatherUp Wellness | Wellness that works.",
     description: "GatherUp Wellness helps organizations build a culture of connection and well-being through mindfulness and community.",
     url: '/',
     siteName: 'GatherUp Wellness',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "GatherUp Wellness | Wellness that Works",
+    title: "GatherUp Wellness | Wellness that works.",
     description: "GatherUp Wellness helps organizations build a culture of connection and well-being through mindfulness and community.",
     images: ['/assets/images/ps-outdoor-yoga-class-atlanta-laure-photography-45_edited.jpg'],
   },
